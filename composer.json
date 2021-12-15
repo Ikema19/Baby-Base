@@ -1,5 +1,7 @@
 {
     "name": "team-f/babe-base",
     "description": "HEW2021",
-    "require": {}
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    }
 }

@@ -1,7 +1,12 @@
 {
-    "name": "team-f/babe-base",
-    "description": "HEW2021",
-    "require": {
-        "altorouter/altorouter": "^2.0"
+  "name": "team-f/babe-base",
+  "description": "HEW2021",
+  "autoload": {
+    "psr-4": {
+      "HTTP\\Controller\\": "src/Http/Controller/"
     }
+  },
+  "require": {
+    "altorouter/altorouter": "^2.0"
+  }
 }

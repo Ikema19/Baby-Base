@@ -29,17 +29,13 @@ $router = new AltoRouter();
 
 $router->setBasePath('/Baby-Base/public/');
 
-$router->map( 'GET', '', function() {
-    require ROOT . "/view/index.php";
-});
-
+$router->map( 'GET', '', 'HTTP\Controller\WelcomController::get', 'welcom' );
 $router->map( 'GET', 'signup', function() {
     require ROOT . "/view/signup.php";
 });
+$router->map( 'GET', 'users/[i:id]', 'HTTP\Controller\UserController::get', 'users-detail' );
 
 $match = $router->match();
-
-var_dump($match);
 
 if ($match !== false) {
   if (is_callable($match['target'])) {
